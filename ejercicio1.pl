@@ -1,82 +1,55 @@
 % Ejecicio 1 
 % Arbol Genealogico
 
-% hombre(arthur).
-% hombre(bill).
-% hombre(louis).
-% hombre(teddy).
-% hombre(percy).
-% hombre(george).
-% hombre(fred).
-% hombre(harry).
-% hombre(james).
-% hombre(albus).
-% hombre(ron).
-% hombre(hugo).
+hombre(andy).
+hombre(jose).
+hombre(alvaro).
+hombre(alejandro).
+hombre(daniel).
+hombre(neil).
+hombre(humberto).
+hombre(carlos).
 
-% mujer(molly).
-% mujer(fleur).
-% mujer(victoire).
-% mujer(dominique).
-% mujer(audrey).
-% mujer(lucy).
-% mujer(molly).
-% mujer(angelina).
-% mujer(roxanne).
-% mujer(ginny).
-% mujer(lily).
-% mujer(hermione).
-% mujer(rose).
+mujer(claudia).
+mujer(yvon).
+mujer(walesvka).
+mujer(teresa).
+mujer(xiona).
+mujer(karina).
+mujer(nadia).
+mujer(yolanda).
 
-progenitor(molly,bill).
-progenitor(molly,percy).
-progenitor(molly,george).
-progenitor(molly,ginny).
-progenitor(molly,ron).
-progenitor(arthur,bill).
-progenitor(arthur,percy).
-progenitor(arthur,george).
-progenitor(arthur,ginny).
-progenitor(arthur,ron).
-progenitor(bill,victoire).
-progenitor(bill,dominique).
-progenitor(bill,louis).
-progenitor(fleur,victoire).
-progenitor(fleur,dominique).
-progenitor(fleur,louis).
-progenitor(percy,lucy).
-progenitor(percy,molly).
-progenitor(audrey,lucy).
-progenitor(audrey,molly).
-progenitor(george,fred).
-progenitor(george,roxanne).
-progenitor(angelina,fred).
-progenitor(angelina,roxanne).
-progenitor(ginny,james).
-progenitor(ginny,lily).
-progenitor(ginny,albus).
-progenitor(harry,james).
-progenitor(harry,lily).
-progenitor(harry,albus).
-progenitor(ron,hugo).
-progenitor(ron,rose).
-progenitor(hermione,hugo).
-progenitor(hermione,rose).
+progenitor(claudia,andy).
+progenitor(claudia,jose).
+progenitor(teresa,claudia).
+progenitor(teresa,walesvka).
+progenitor(teresa,yvon).
+progenitor(teresa,neil).
+progenitor(xiona,nadia).
+progenitor(xiona,alejandro).
+progenitor(yolanda,alvaro).
+progenitor(yolanda,carlos).
+progenitor(alvaro,andy).
+progenitor(alvaro,jose).
+progenitor(daniel,alvaro).
+progenitor(daniel,carlos).
+progenitor(humberto,claudia).
+progenitor(humberto,yvon).
+progenitor(humberto,walesvka).
+progenitor(humberto,neil).
+progenitor(carlos,nadia).
+progenitor(carlos,alejandro).
 
-pareja(arthur,molly).
-pareja(molly,arthur).
-pareja(bill,fleur).
-pareja(fleur,bill).
-pareja(percy,audrey).
-pareja(audrey,percy).
-pareja(george,angelina).
-pareja(angelina,george).
-pareja(ginny,harry).
-pareja(harry,ginny).
-pareja(ron,hermione).
-pareja(hermione,ron).
-pareja(victoire,teddy).
-pareja(teddy,victoire).
+pareja(claudia,alvaro).
+pareja(alvaro,claudia).
+pareja(xiona,carlos).
+pareja(carlos,xiona).
+pareja(neil,karina).
+pareja(karina,neil).
+pareja(teresa,humberto).
+pareja(humberto,teresa).
+pareja(daniel,yolanda).
+pareja(yolanda,daniel).
 
 padre(X,Y):-hombre(X),progenitor(X,Y).
 madre(X,Y):-mujer(X),progenitor(X,Y).
